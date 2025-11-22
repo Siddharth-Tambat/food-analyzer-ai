@@ -31,7 +31,7 @@ Here is how the AI analyzes popular snacks for a user with **High LDL Cholestero
 | The "2-Minute" Trap | The "Comfort" Drink | The Street Food King |
 | :---: | :---: | :---: |
 | <img src="assets/01_eg_maggi.png" width="250" alt="Maggi Analysis"> | <img src="assets/02_eg_chai.png" width="250" alt="Chai Analysis"> | <img src="assets/03_eg_vada_pav.png" width="250" alt="Vada Pav Analysis"> |
-| **Rating: ⭐ (1/5)**<br>Refined carbs and unhealthy fats aggressively target already high LDL and stressed liver. | **Rating: ⭐⭐ (2/5)**<br>Sugar spikes insulin; tannins block iron absorption needed for low ferritin levels. | **Rating: ⭐ (1/5)**<br>Deep-fried preparation is catastrophic for cholesterol goals and liver inflammation. |
+| **Rating: ⭐ (1/5)**<br>Refined carbs and unhealthy fats aggressively target already high LDL and stressed liver. | **Rating: ⭐ (1/5)**<br>Sugar spikes insulin; tannins block iron absorption needed for low ferritin levels. | **Rating: ⭐ (1/5)**<br>Deep-fried preparation is catastrophic for cholesterol goals and liver inflammation. |
 
 ---
 
