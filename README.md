@@ -7,11 +7,9 @@
 
 ## 🧐 What is this?
 
-Most nutrition apps are fundamentally broken because they treat everyone the same. They tell you a protein bar is "healthy" because it has protein, ignoring the fact that it might spike your pre-diabetic blood sugar or contains allergens that inflame your gut.
+Generic nutrition apps ignore your unique biology. This project creates a Custom Google Gemini Gem that analyzes food based on your profile, goals, specific blood work (e.g., High LDL, Low Iron), allergies, and activity levels.
 
-**Food Analyzer AI** is different. It's a blueprint for creating your own private, hyper-personalized nutrition assistant using Google Gemini's "Custom Gems."
-
-By feeding the AI your specific context—blood test results (e.g., High LDL, Low Vitamin D), activity level, allergies, and goals—it creates a strict dietary engine that analyzes food *only* for you. It cuts through marketing hype and tells you the cold, hard truth about what's on your plate.
+It ignores marketing labels ("Healthy!", "Baked!") and evaluates food strictly against your specific medical needs.
 
 ### Key Features
 
