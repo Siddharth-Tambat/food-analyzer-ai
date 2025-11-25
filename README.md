@@ -1,30 +1,27 @@
 # 🩺 Personalized Food Analyzer AI (Powered by Google Gemini Gems)
 
-> **Stop guessing. Start knowing.** Turn generic nutrition advice into hyper-personalized health intelligence using your own biomarkers.
+> A simple, personalized food-analysis tool that uses your health data to rate foods and suggest better choices.
 
 [![Gemini](https://img.shields.io/badge/Powered%20by-Google%20Gemini-8E75B2?style=for-the-badge&logo=google-gemini)](https://gemini.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ## 🧐 What is this?
 
-Generic nutrition apps ignore your unique biology. This project creates a Custom Google Gemini Gem that analyzes food based on your profile, goals, specific blood work (e.g., High LDL, Low Iron), allergies, and activity levels.
-
-It ignores marketing labels ("Healthy!", "Baked!") and evaluates food strictly against your specific medical needs.
+A lightweight AI tool that analyzes food images and gives you a rating based on **your personal health profile**.  
+It considers your goals, biomarkers (like LDL, iron, liver markers), allergies, and activity level.  
+The aim is simple: help you understand how a specific food affects *your* body and offer suitable alternatives when needed.
 
 ### Key Features
-
-* **🩸 Biomarker-Driven Analysis:** Ratings are based on *your* labs (e.g., cholesterol, liver enzymes, vitamin deficiencies), not general guidelines.
-* **🛡️ Safety First:** Automatic "1-Star" instant rejection for foods containing your specific allergens or medication interactions.
-* **🚫 Anti-Marketing Defense:** Sees through "Healthy," "Diet," or "Baked" labels to expose hidden sugars, refined carbs, and inflammatory oils.
-* **🔄 Smart Replacements:** If a food is rated poorly (≤2 stars), it suggests a culturally relevant, healthier alternative.
-* **⚖️ Personalized Portions:** Serving sizes calculated based on your height, weight, and activity level.
-* **📱 Native Mobile Experience:** Runs quickly and freely on your phone via the Gemini app.
+- Uses your biomarker data for personalized ratings  
+- Flags allergens, sensitivities, or conflicts with your profile  
+- Highlights hidden issues (excess sugar, refined carbs, poor-quality fats)  
+- Suggests practical alternatives when a food rates low  
+- Adjusts portion guidance based on height, weight, and activity  
+- Works on any device using the Gemini app
 
 ---
 
 ## 📸 Visual Proof: The Engine in Action
-
-Here is how the AI analyzes popular snacks for a user with **High LDL Cholesterol, Liver stress (SGOT), and Vitamin Deficiencies**, targeting an Indian context.
 
 | The "2-Minute" Trap | The "Comfort" Drink | The Street Food King |
 | :---: | :---: | :---: |
@@ -35,48 +32,37 @@ Here is how the AI analyzes popular snacks for a user with **High LDL Cholestero
 
 ## 🚀 Setup Guide: Create Your Personal Gem
 
-You need a Google account with access to Gemini Advanced to create Custom Gems.
+You need a Google account with Gemini Advanced to create custom Gems.
 
-### Step 1: Generate Your Data Profile
+### Step 1: Generate Your Profile  
+This creates a clean configuration block from your health data.
 
-The AI needs to know who you are before it can advise you. We use a specialized prompt to convert your messy health data into a clean configuration block.
+1. Collect your information: blood reports, height/weight, goals, allergies, supplements.
+2. Open a chat in Gemini.
+3. Paste the **Profile Generator Prompt**:  
+   👉 `prompts/01_profile_generator.md`
+4. Provide your health details when asked.
+5. Copy the final code block output. You’ll need it in Step 2.
 
-1.  Gather your data: Recent blood work PDFs, current weight/height, supplements stack, and goals.
-2.  Open a standard chat with [Google Gemini](https://gemini.google.com/).
-3.  Copy and paste the entire content of the **Profile Generator Prompt**:
-    > 📄 **[Link to prompts/01_profile_generator.md](prompts/01_profile_generator.md)**
-4.  Reply to Gemini with your health dump.
-5.  **Crucial:** Copy the final code block output it generates. You will need this for Step 2.
+### Step 2: Set Up the Food Analyzer Gem
 
-### Step 2: Configure the Food Analyzer Gem
-
-1.  Go to Gemini and navigate to **Gem Manager** -> **New Gem**.
-2.  **Name:** Give it a name like "My Health Scanner".
-3.  **Instructions:** Copy and paste the entire content of the **Food Analyzer Prompt**:
-    > 📄 **[Link to prompts/02_food_analyzer.md](prompts/02_food_analyzer.md)**
-4.  **THE VITAL STEP:** In the Gem instructions box, scroll down to the section labeled:
-    `# [INSTRUCTION FOR USER: PASTE THE OUTPUT FROM 'STEP 1: PROFILE GENERATOR' BELOW]`
-    Delete that bracketed line and paste your personalized data block from Step 1 right there.
-5.  Click **Create**.
+1. Open **Gem Manager** → **New Gem**.
+2. Name your Gem (e.g., “Food Analyzer”).
+3. Paste the **Food Analyzer Prompt**:  
+   👉 `prompts/02_food_analyzer.md`
+4. Scroll to the section marked:  
+   `# [INSTRUCTION FOR USER: PASTE THE OUTPUT FROM 'STEP 1: PROFILE GENERATOR' BELOW]`
+5. Delete that instruction line and paste your profile block there.
+6. Save the Gem.
 
 ---
 
-## 💡 Pro-Tips for Best Results
+## 💡 Usage Tips
 
-Once your Gem is running, how you talk to it matters.
-
-### 1. Context is King
-The AI can analyze images, but text provides crucial context. A "Biryani" from a fast-food chain is nutritionally different from a "Homemade Biryani with less oil and extra lean chicken."
-
-* **Good input:** *Sends photo of a burger*
-* **Better input:** "Restaurant beef burger, ate half the bun."
-* **Best input:** "Homemade chicken curry, minimal oil, one small bowl with rice."
-
-### 2. Use the "Thinking" Model
-For the most accurate, nuanced medical-grade analysis, ensure your Gemini is set to use the **Gemini 1.5 Pro (Thinking)** model, if available to you. It reasons deeper about nutrient interactions.
-
-### 3. The "Quick Launch" Hack (Android Chrome)
-Don't open the Gemini app and navigate menus every time you eat. Pin your custom Gem directly to your home screen for instant access.
+- Providing short text along with the image improves accuracy  
+  (e.g., “homemade, low oil”, “restaurant, ate half portion”).  
+- Use the most capable Gemini model available in your account.  
+- You can pin the Gem to your home screen for quick access.
 
 <p align="center">
   <img src="assets/how_to_pin_app.png" alt="How to pin Gemini Gem to home screen" width="700">
@@ -86,4 +72,6 @@ Don't open the Gemini app and navigate menus every time you eat. Pin your custom
 
 ## ⚠️ Disclaimer
 
-**This tool is for informational purposes only.** The analysis provided by this AI is based on the data you provide and general nutritional knowledge. It is **not** a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified health provider with any questions regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this application.
+This tool provides general nutritional insights based on the data you supply.  
+It is **not** a medical device or a replacement for professional medical advice.  
+Always consult a qualified healthcare provider for medical guidance.
